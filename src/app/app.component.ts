@@ -9,9 +9,10 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
 export class AppComponent {
   title = 'world-cup-bracket';
 
-  todo = ['Get to work', 'Pick up groceries', 'Go home', 'Fall asleep'];
+  groupA = ['Qatar', 'Ecuador', 'Senegal ', 'Netherlands'];
 
-  done = ['Get up', 'Brush teeth', 'Take a shower', 'Check e-mail', 'Walk dog'];
+  // groupAFinal = ['Get up', 'Brush teeth', 'Take a shower', 'Check e-mail'];
+  groupAFinal: any[] = [];
 
   drop(event: CdkDragDrop<string[]>) {
     if (event.previousContainer === event.container) {

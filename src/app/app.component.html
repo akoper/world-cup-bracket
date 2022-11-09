@@ -7,30 +7,30 @@
 stage, to the round of 16 all of the way to who you predict will win the final.</div>
 
   <div class="example-container">
-    <h2>To do</h2>
+    <h2>Group A</h2>
 
     <div
       cdkDropList
-      #todoList="cdkDropList"
-      [cdkDropListData]="todo"
-      [cdkDropListConnectedTo]="[doneList]"
+      #groupAList="cdkDropList"
+      [cdkDropListData]="groupA"
+      [cdkDropListConnectedTo]="[groupAFinalList]"
       class="example-list"
       (cdkDropListDropped)="drop($event)">
-      <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+      <div class="example-box" *ngFor="let item of groupA" cdkDrag>{{item}}</div>
     </div>
   </div>
 
   <div class="example-container">
-    <h2>Done</h2>
+    <h2>End Group</h2>
 
     <div
       cdkDropList
-      #doneList="cdkDropList"
-      [cdkDropListData]="done"
-      [cdkDropListConnectedTo]="[todoList]"
+      #groupAFinalList="cdkDropList"
+      [cdkDropListData]="groupAFinal"
+      [cdkDropListConnectedTo]="[groupAList]"
       class="example-list"
       (cdkDropListDropped)="drop($event)">
-      <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+      <div class="example-box" *ngFor="let item of groupAFinal" cdkDrag>{{item}}</div>
     </div>
   </div>
 
